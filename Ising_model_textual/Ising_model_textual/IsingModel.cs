@@ -20,7 +20,7 @@ public unsafe class IsingModel
     }
 
 
-    //Quick conversion methods
+    //Conversion methods
 
     public int ToPlusMinusOne(bool b) {if (b) return 1; return -1;}
     public string ToPlusMinusOneString(bool b) {if (b) return " "; return "0";}
@@ -111,7 +111,7 @@ public unsafe class IsingModel
 
     public void IsingGlobalUpdate() 
     {
-        //The phase shifts in the first three for loops aim to emulate somewhat independant updates, 
+        //The phase shifts in the first three for loops aim to emulate independance in the updates, 
         //so as to avoid a visible sweeping effect. 
         for (int nPhaseShift = 0; nPhaseShift < 2; nPhaseShift++)
         {

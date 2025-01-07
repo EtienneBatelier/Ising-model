@@ -3,7 +3,7 @@ Ising Model Simulation -- 01.2025
 
 What is in this repository? 
 
-This repository contains two versions of a program that implements Ising's model for ferromagnetism. The first version of the program is purely textual. It is a C# console application that prints out the state -- plus or minus 1 -- of the particles making up a rectangular cuboidal lattice -- see "The Simulation" below. The second version uses the Unity engine to provide a real-time, graphical, interactive simulation. 
+This repository contains two versions of a program that implements Ising's model for ferromagnetism. The first version of the program is purely textual. It is a C# console application that prints out the state of the particles making up a rectangular cuboidal lattice -- see "The Simulation" below. The second version uses the Unity engine to provide a real-time, graphical, interactive simulation. 
  
 The overlap in code between the two versions is large, which is intended. The graphical, Unity version includes most of the .cs files of the textual version as scripts. It requires a couple specific additional classes whose code is written in new .cs files. An example is IsingModelGraphicalUnity. This additional class is solely dedicated to the graphical, Unity version. It inherits from its textual counterpart, IsingModel, and only contain as new attributes what is strictly needed to display things on the screen. The Unity project contains a single Scene with a Camera, a GameObject to which the simulation scripts are attached, as well as some additional GameObjects, scripts and other Unity-specific tools to provide a rudimentary UI. 
 
@@ -25,7 +25,7 @@ Ising's model simulates the evolution of a lattice of particles that can be in o
 
 How to interact with the program? 
 
-The textual version has a Main function in the IsingModel class. It readily contains an initialized simulation for a 100x100x1 example. 
+The textual version has a Main function in the IsingModelSim class. It readily contains an initialized simulation for a 100x100x1 example. 
 
 The graphical version comes with a simple UI that enables one to interact with the simulation in real time. The WASD keys control the position of the camera. Keeping the right mouse button pressed while moving the mouse around rotates the camera. Below the tag "Parameters" in the top right corners of the screen lie two sliders. They control the two parameters of the simulation: the coldness and the ambient magnetic field. 
 Below the tag "Ferromagnetic Chunk" are yet another bunch of sliders. The sliders "Dimensions" control the dimensions of a new rectangular cuboidal ferromagnetic chunk to be simulated. Once dimensions are specified, pressing Enter will spawn the new lattice. 

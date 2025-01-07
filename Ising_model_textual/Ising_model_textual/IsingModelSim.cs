@@ -1,4 +1,4 @@
-namespace IsingModelSim{
+﻿namespace IsingModelSim{
 using IsingModel;
 using System;
 
